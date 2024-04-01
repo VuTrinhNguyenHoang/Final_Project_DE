@@ -2,7 +2,6 @@ CHUẨN BỊ DỮ LIỆU VÀ KHUNG GIAO DIỆN
 - Vẽ mẫu giao diện hệ thống (đơn giản).
 - Thiết kế pipeline (khung, mẫu, vẫn đảm bảo được tính chi tiết).
 - Thu thập dữ liệu.
-- Tìm hiểu multiprocessing task using airflow.
 - Tìm hiểu cách tải dữ liệu từ DB lên hệ thống và lưu trữ dữ liệu.
 - Tổng kết và đánh giá.
 XỨ LÝ DỮ LIỆU VÀ THIẾT KẾ GIAO DIỆN
