@@ -1,0 +1,56 @@
+body * {
+    font-family: Roboto, sans-serif;
+}
+
+.data-market {
+    min-width: 984px;
+}
+
+.color--green {
+    color: #34c763 !important;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+table td, table th {
+    border-bottom: 1px solid #585873;
+    line-height: 1.5;
+}
+
+table td {
+    padding: 8px 10px;
+}
+
+.data-market th, .data-market td {
+    white-space: nowrap;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+table {
+    width: 100%;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+    border-collapse: collapse;
+}
