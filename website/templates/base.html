@@ -15,6 +15,23 @@
       crossorigin="anonymous"
     />
     <title>{% block title %}{% endblock %}</title>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='canvasjs.stock.min.js')}}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='jquery-1.11.1.min.js')}}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='displayChart.js')}}"
+    ></script>
+    <!-- <style>
+      body {
+        background-color: #120f0f;
+      }
+    </style> -->
   </head>
   <body>
     <!-- Huyen workspace -->
