@@ -1,0 +1,76 @@
+body * {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #171a23;
+  color: #fff;
+}
+
+table td,
+table th {
+  border-bottom: 1px solid #585873;
+  line-height: 1.5;
+  padding: 8px 10px;
+}
+
+table {
+  width: 100%;
+  text-align: right;
+}
+
+.sticky-left {
+  text-align: left;
+}
+
+.data-market__search {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #585873;
+  padding: 20px;
+}
+
+.data-market__select {
+  border-radius: 4px;
+  border: 1px solid #585873;
+  background-color: #232836;
+  font-size: 12px;
+  height: 40px;
+  padding: 0 15px;
+  width: 400px;
+  margin-right: 60px;
+  color: #fff;
+}
+
+.data-market__date {
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #585873;
+  background-color: #232836;
+  font-size: 12px;
+  max-height: 40px;
+  width: 180px; 
+  margin: 0 8px;
+  color: #fff;
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+}
+
+.btn {
+  border: 2px solid #ff9500;
+  border-radius: 30px;
+  padding: 8px 24px;
+  white-space: nowrap;
+  color: #000;
+  background: #ff9500;
+  line-height: 26px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 0 8px;
+}
+
+.container {
+  width: 1054px;
+  max-width: 100%;
+}
