@@ -73,3 +73,86 @@ table {
   width: 1280px;
   max-width: 100%;
 }
+/* menu Ban */
+.menu{
+  width: 500px;
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+}
+.menuText{
+  
+  margin-right: 10px;
+  margin-left: 35px;
+}
+.selector{
+  /* background: #ff9500; */
+  width: 100px;
+  cursor: pointer;
+}
+
+#selectfield{
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #ff9500;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background:rgba(195, 111, 2, 0.7);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.choiceStock{
+  border: 1px solid black;
+  width: 120;
+  padding: 0px;
+  display: flex;
+  background: #ff9500;
+  border-radius: 6px;
+  list-style: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: absolute;
+  color: #000;
+}
+#choiceStock{
+  border: 1px solid black;
+  width: 120px;
+  border-radius: 6px;
+  color: #000;
+  text-align: center;
+  background: #ff9500;
+}
+#list{
+  cursor: pointer;
+  width: 120px;
+  background: #ff9500;
+  padding: 0px;
+  border-radius: 6px;
+  overflow: visible;
+  position: absolute;
+  z-index: 9999;
+}
+.options{
+  cursor: pointer;
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 0px;
+}
+#textOption{
+  color: #000;
+  text-align: center;
+}
+.options:hover{
+  background: red;
+}
+.hide{
+  visibility: hidden;
+}
+/* end menu Ban */
