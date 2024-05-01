@@ -1,0 +1,64 @@
+[2024-04-28T15:57:19.703+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-28T15:57:19.718+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Final_exam.get_data manual__2024-04-28T15:54:31.319561+00:00 [queued]>
+[2024-04-28T15:57:19.726+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Final_exam.get_data manual__2024-04-28T15:54:31.319561+00:00 [queued]>
+[2024-04-28T15:57:19.726+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-04-28T15:57:19.735+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): get_data> on 2024-04-28 15:54:31.319561+00:00
+[2024-04-28T15:57:19.742+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=205) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-04-28T15:57:19.743+0000] {standard_task_runner.py:63} INFO - Started process 207 to run task
+[2024-04-28T15:57:19.743+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Final_exam', 'get_data', 'manual__2024-04-28T15:54:31.319561+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/Project.py', '--cfg-path', '/tmp/tmpg4ekyxzr']
+[2024-04-28T15:57:19.744+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask get_data
+[2024-04-28T15:57:19.777+0000] {task_command.py:426} INFO - Running <TaskInstance: Final_exam.get_data manual__2024-04-28T15:54:31.319561+00:00 [running]> on host 73ada3aeb297
+[2024-04-28T15:57:19.839+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='ha20040204@gmail.com' AIRFLOW_CTX_DAG_OWNER='HA' AIRFLOW_CTX_DAG_ID='Final_exam' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-04-28T15:54:31.319561+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-28T15:54:31.319561+00:00'
+[2024-04-28T15:57:19.840+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-28T15:57:19.893+0000] {logging_mixin.py:188} INFO -       ID        Date        Open  ...     Volume  Changed  Changed_rate
+0   AAPL  2024-04-26  169.880005  ...   44525100     1.03         0.61%
+1   AAPL  2024-04-25  169.529999  ...   50558300     1.94         1.17%
+2   AAPL  2024-04-24  166.539993  ...   48251800     1.29         0.78%
+3   AAPL  2024-04-23  165.350006  ...   49537800     0.15         0.09%
+4   AAPL  2024-04-22  165.520004  ...   48116400     0.69         0.42%
+5   AAPL  2024-04-19  166.210007  ...   67772100    -2.47        -1.48%
+6   AAPL  2024-04-18  168.029999  ...   43122900    -1.45        -0.86%
+7   AAPL  2024-04-17  169.610001  ...   50901200    -0.27        -0.16%
+8   AAPL  2024-04-16  171.750000  ...   73711200    -4.23        -2.45%
+9   AAPL  2024-04-15  175.360001  ...   73531800    -1.71        -0.98%
+10  AAPL  2024-04-12  174.259995  ...  101593300     6.05          3.6%
+11  AAPL  2024-04-11  168.339996  ...   91070300     1.05         0.63%
+12  AAPL  2024-04-10  168.800003  ...   49709300    -1.24        -0.74%
+13  AAPL  2024-04-09  168.699997  ...   42451200     0.11         0.07%
+14  AAPL  2024-04-08  169.029999  ...   37425500    -0.71        -0.42%
+15  AAPL  2024-04-05  169.589996  ...   42055200     0.13         0.08%
+16  AAPL  2024-04-04  170.289993  ...   53704400     0.24         0.14%
+17  AAPL  2024-04-03  168.789993  ...   47691700     0.35         0.21%
+18  AAPL  2024-04-02  169.080002  ...   49329500    -1.25        -0.74%
+19  AAPL  2024-04-01  171.190002  ...   46240500    -1.03         -0.6%
+20  AAPL  2024-04-26  169.880005  ...   44525100     1.03         0.61%
+21  AAPL  2024-04-25  169.529999  ...   50558300     1.94         1.17%
+22  AAPL  2024-04-24  166.539993  ...   48251800     1.29         0.78%
+23  AAPL  2024-04-23  165.350006  ...   49537800     0.15         0.09%
+24  AAPL  2024-04-22  165.520004  ...   48116400     0.69         0.42%
+25  AAPL  2024-04-19  166.210007  ...   67772100    -2.47        -1.48%
+26  AAPL  2024-04-18  168.029999  ...   43122900    -1.45        -0.86%
+27  AAPL  2024-04-17  169.610001  ...   50901200    -0.27        -0.16%
+28  AAPL  2024-04-16  171.750000  ...   73711200    -4.23        -2.45%
+29  AAPL  2024-04-15  175.360001  ...   73531800    -1.71        -0.98%
+30  AAPL  2024-04-12  174.259995  ...  101593300     6.05          3.6%
+31  AAPL  2024-04-11  168.339996  ...   91070300     1.05         0.63%
+32  AAPL  2024-04-10  168.800003  ...   49709300    -1.24        -0.74%
+33  AAPL  2024-04-09  168.699997  ...   42451200     0.11         0.07%
+34  AAPL  2024-04-08  169.029999  ...   37425500    -0.71        -0.42%
+35  AAPL  2024-04-05  169.589996  ...   42055200     0.13         0.08%
+36  AAPL  2024-04-04  170.289993  ...   53704400     0.24         0.14%
+37  AAPL  2024-04-03  168.789993  ...   47691700     0.35         0.21%
+38  AAPL  2024-04-02  169.080002  ...   49329500    -1.25        -0.74%
+39  AAPL  2024-04-01  171.190002  ...   46240500    -1.03         -0.6%
+
+[40 rows x 10 columns]
+[2024-04-28T15:57:19.893+0000] {logging_mixin.py:188} INFO - Successfully.
+[2024-04-28T15:57:19.893+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-04-28T15:57:19.894+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-28T15:57:19.901+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=Final_exam, task_id=get_data, execution_date=20240428T155431, start_date=20240428T155719, end_date=20240428T155719
+[2024-04-28T15:57:19.916+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-04-28T15:57:19.930+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-04-28T15:57:19.931+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
