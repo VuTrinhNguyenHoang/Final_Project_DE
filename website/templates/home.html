@@ -1,21 +1,64 @@
-{% extends 'base.html' %} {% block title %}Stock Analysis System{% endblock %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="row">
   <!-- Ban workspace -->
-  <div class="col-7"></div>
+  <div class="col-7" style="left: 20px; top: 1px">
+    <div class="menu" id="stockMenu">
+      <div class="menuText">chọn stock :</div>
+    </div>
+    <div id="chartContainer" style="height: 500px; width: 100%"></div>
+  </div>
   <!-- end workspace -->
 
   <!-- Hoan workspace -->
-  <div class="col-5"></div>
+  <div
+    class="col-5"
+    ,
+    style="
+      height: 300px;
+      overflow-y: scroll;
+      border: 2px solid #ff9500;
+      background-color: #232836;
+    "
+  >
+    <table>
+      <thead>
+        <tr style="color: darkorange">
+          <th style="width: 25%">Mã giao dịch</th>
+          <th style="width: 25%">Giá đóng cửa</th>
+          <th style="width: 25%">Thay đổi</th>
+          <th style="width: 25%">Tỉ lệ thay đổi</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for index, row in data.iterrows() %}
+        {% if row['Changed'] > 0 %}
+        <tr>
+          <td>{{row['ID']}}</td>
+          <td>{{row['Close']|round(2)}}</td>
+          <td style="color: #34c763 !important">+{{row['Changed']}}</td>
+          <td style="color: #34c763 !important">{{row['Changed_rate']}}</td>
+        </tr>
+        {% else %}
+        <tr>
+          <td>{{ row['ID'] }}</td>
+          <td>{{ row['Close']|round(2)}}</td>
+          <td style="color: #ff453a !important">{{row['Changed']}}</td>
+          <td style="color: #ff453a !important">{{row['Changed_rate']}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
   <!-- end workspace -->
 </div>
-
+<br /><br /><br />
 <!-- Vu workspace -->
 <div class="tab-content container">
-  <div class="data-market__top overflow-x-auto">
-    <form class="data-market__search data-market__width">
-      <select class="data-market__select">
-        {% for id in df['ID'].values %}
+  <div class="data-market__top overflow-x-auto container">
+    <form class="data-market__search data-market__width" method="POST">
+      <select class="data-market__select" id="ticker" type="text" name="ticker">
+        {% for id in ids['ID'].values %}
         <option value="{{id}}">{{id}}</option>
         {% endfor %}
       </select>
@@ -26,6 +69,7 @@
             placeholder="Từ ngày"
             class="data-market__date data-market__from"
             value=""
+            name="date-from"
           />
         </div>
       </div>
@@ -36,12 +80,11 @@
             placeholder="Đến ngày"
             class="data-market__date data-market__to"
             value=""
+            name="date-to"
           />
         </div>
       </div>
-      <button class="btn btn--primary btn--small" style="outline: none">
-        Tìm kiếm
-      </button>
+      <button class="btn btn--primary" style="outline: none">Tìm kiếm</button>
     </form>
   </div>
   <table class="data-market__width">
@@ -51,30 +94,37 @@
         <th>Thay đổi</th>
         <th>Giá mở cửa</th>
         <th>Giá thấp nhất</th>
-        <th>Giá mở cửa</th>
+        <th>Giá cao nhất</th>
         <th>Giá đóng cửa</th>
         <th>Khối lượng giao dịch</th>
       </tr>
     </thead>
     <tbody>
+      {% for _, row in df.iterrows() %} {% if row['Changed'] > 0 %}
       <tr>
-        <td class="sticky-code sticky-left">24/04/2024</td>
-        <td style="color: #34c763 !important">+28.21<br />(+2.40%)</td>
-        <td>1,186.47</td>
-        <td>1,185.13</td>
-        <td>1,207.61</td>
-        <td>1,205.61</td>
-        <td>820,079,823</td>
+        <td class="sticky-code sticky-left">{{row['Date']}}</td>
+        <td style="color: #34c763 !important">
+          +{{row['Changed']}}<br />({{row['Changed_rate']}})
+        </td>
+        <td>{{row['Open']}}</td>
+        <td>{{row['Low']}}</td>
+        <td>{{row['High']}}</td>
+        <td>{{row['Close']}}</td>
+        <td>{{row['Volume']}}</td>
       </tr>
+      {% else %}
       <tr>
-        <td class="sticky-code sticky-left">23/04/2024</td>
-        <td style="color: #ff453a !important">-12.82<br />(-1.08%)</td>
-        <td>1,190.56</td>
-        <td>1,169.61</td>
-        <td>1,192.80</td>
-        <td>1,177.40</td>
-        <td>672,941,708</td>
+        <td class="sticky-code sticky-left">{{row['Date']}}</td>
+        <td style="color: #ff453a !important">
+          {{row['Changed']}}<br />({{row['Changed_rate']}})
+        </td>
+        <td>{{row['Open']}}</td>
+        <td>{{row['Low']}}</td>
+        <td>{{row['High']}}</td>
+        <td>{{row['Close']}}</td>
+        <td>{{row['Volume']}}</td>
       </tr>
+      {% endif %} {% endfor %}
     </tbody>
   </table>
 </div>

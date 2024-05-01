@@ -1,0 +1,35 @@
+[2024-05-01T10:20:42.399+0000] {processor.py:161} INFO - Started process (PID=42) to work on /opt/airflow/dags/Project.py
+[2024-05-01T10:20:42.400+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Project.py for tasks to queue
+[2024-05-01T10:20:42.401+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:20:42.401+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/Project.py
+[2024-05-01T10:20:43.059+0000] {processor.py:840} INFO - DAG(s) 'Final_exam' retrieved from /opt/airflow/dags/Project.py
+[2024-05-01T10:20:43.139+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:20:43.139+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-01T10:20:43.152+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:20:43.151+0000] {dag.py:3954} INFO - Setting next_dagrun for Final_exam to None, run_after=None
+[2024-05-01T10:20:43.167+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Project.py took 0.773 seconds
+[2024-05-01T10:21:13.633+0000] {processor.py:161} INFO - Started process (PID=107) to work on /opt/airflow/dags/Project.py
+[2024-05-01T10:21:13.634+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Project.py for tasks to queue
+[2024-05-01T10:21:13.636+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:21:13.636+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/Project.py
+[2024-05-01T10:21:14.183+0000] {processor.py:840} INFO - DAG(s) 'Final_exam' retrieved from /opt/airflow/dags/Project.py
+[2024-05-01T10:21:14.257+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:21:14.257+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-01T10:21:14.275+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:21:14.274+0000] {dag.py:3954} INFO - Setting next_dagrun for Final_exam to None, run_after=None
+[2024-05-01T10:21:14.290+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Project.py took 0.662 seconds
+[2024-05-01T10:21:44.346+0000] {processor.py:161} INFO - Started process (PID=173) to work on /opt/airflow/dags/Project.py
+[2024-05-01T10:21:44.347+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Project.py for tasks to queue
+[2024-05-01T10:21:44.348+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:21:44.348+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/Project.py
+[2024-05-01T10:21:44.813+0000] {processor.py:840} INFO - DAG(s) 'Final_exam' retrieved from /opt/airflow/dags/Project.py
+[2024-05-01T10:21:44.878+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:21:44.878+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-01T10:21:44.890+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:21:44.890+0000] {dag.py:3954} INFO - Setting next_dagrun for Final_exam to None, run_after=None
+[2024-05-01T10:21:44.905+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Project.py took 0.564 seconds
+[2024-05-01T10:22:15.008+0000] {processor.py:161} INFO - Started process (PID=233) to work on /opt/airflow/dags/Project.py
+[2024-05-01T10:22:15.008+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Project.py for tasks to queue
+[2024-05-01T10:22:15.010+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:22:15.009+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/Project.py
+[2024-05-01T10:22:15.463+0000] {processor.py:840} INFO - DAG(s) 'Final_exam' retrieved from /opt/airflow/dags/Project.py
+[2024-05-01T10:22:15.529+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:22:15.529+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-01T10:22:15.541+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:22:15.541+0000] {dag.py:3954} INFO - Setting next_dagrun for Final_exam to None, run_after=None
+[2024-05-01T10:22:15.558+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Project.py took 0.555 seconds
+[2024-05-01T10:22:45.599+0000] {processor.py:161} INFO - Started process (PID=299) to work on /opt/airflow/dags/Project.py
+[2024-05-01T10:22:45.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Project.py for tasks to queue
+[2024-05-01T10:22:45.601+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:22:45.601+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/Project.py
+[2024-05-01T10:22:46.059+0000] {processor.py:840} INFO - DAG(s) 'Final_exam' retrieved from /opt/airflow/dags/Project.py
+[2024-05-01T10:22:46.123+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:22:46.123+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-01T10:22:46.135+0000] {logging_mixin.py:188} INFO - [2024-05-01T10:22:46.135+0000] {dag.py:3954} INFO - Setting next_dagrun for Final_exam to None, run_after=None
+[2024-05-01T10:22:46.148+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Project.py took 0.554 seconds
