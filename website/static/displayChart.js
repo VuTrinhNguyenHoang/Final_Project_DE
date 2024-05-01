@@ -1,10 +1,11 @@
 window.onload = function () {
+  // --------------------------------------------------------------------------------------------------
   var dataPoints1 = [],
     dataPoints2 = [],
     dataPoints3 = [];
   var stockChart = new CanvasJS.StockChart("chartContainer", {
     exportEnabled: true,
-    theme: "light2",
+    theme: "dark1",
     title: {
       text: "StockChart with Tooltip & Crosshair Syncing",
     },
@@ -88,7 +89,7 @@ window.onload = function () {
       },
     },
   });
-  $.getJSON("https://canvasjs.com/data/docs/ltceur2018.json", function (data) {
+  $.getJSON('/static/ltceur2018.json', function (data) {
     for (var i = 0; i < data.length; i++) {
       dataPoints1.push({
         x: new Date(data[i].date),
