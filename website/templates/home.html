@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block title %}Stock Analysis System{% endblock %}
+{% extends 'base.html' %}
 {% block content %}
 <div class="row">
   <!-- Ban workspace -->
@@ -12,11 +12,11 @@
 
 <!-- Vu workspace -->
 <div class="tab-content container">
-  <div class="data-market__top overflow-x-auto">
-    <form class="data-market__search data-market__width">
+  <div class="data-market__top overflow-x-auto container">
+    <form class="data-market__search data-market__width" method="POST">
       <select class="data-market__select">
-        {% for id in df['ID'].values %}
-        <option value="{{id}}">{{id}}</option>
+        {% for id in ids['ID'].values %}
+        <option class="ticker" value="{{id}}">{{id}}</option>
         {% endfor %}
       </select>
       <div class="react-datepicker-wrapper">
@@ -39,7 +39,7 @@
           />
         </div>
       </div>
-      <button class="btn btn--primary btn--small" style="outline: none">
+      <button class="btn btn--primary" style="outline: none">
         Tìm kiếm
       </button>
     </form>
