@@ -1,5 +1,58 @@
 window.onload = function () {
+  // Menu
+  const para = document.getElementById("stockMenu");
+
+  var selectorDiv = document.createElement("div");
+  selectorDiv.classList.add("selector");
+
+  var selectFieldDiv = document.createElement("div");
+  selectFieldDiv.id = "selectField";
+
+  var options = ["ltceur2018", "two", "three", "four", "five", "six", "seven"];
+  var choiceStockP = document.createElement("p");
+  choiceStockP.id = "choiceStock";
+  choiceStockP.textContent = options[0];
+  choiceStockP.style = "margin-bottom: 0px;"
+  selectFieldDiv.appendChild(choiceStockP);
+
+  var listUl = document.createElement("ul");
+  listUl.id = "list";
+  listUl.classList.add("hide");
+  options.forEach(function (optionText) {
+    var li = document.createElement("li");
+    li.classList.add("options");
+    var p = document.createElement("p");
+    p.id = "textOption"
+    p.style = "margin-bottom: 0px;"
+    p.textContent = optionText;
+    li.appendChild(p);
+    listUl.appendChild(li);
+  });
+  selectFieldDiv.appendChild(listUl);
+  selectorDiv.appendChild(selectFieldDiv);
+  para.appendChild(selectorDiv);
   // --------------------------------------------------------------------------------------------------
+  var selectField = document.getElementById("selectField");
+  var choiceStock = document.getElementById("choiceStock");
+  var options = document.getElementsByClassName("options");
+  var list = document.getElementById("list");
+  selectField.onclick = function () {
+    list.classList.toggle("hide");
+  };
+  for (option of options) {
+    option.onclick = function () {
+      choiceStock.innerHTML = this.textContent;
+      var Path = "/static/" + choiceStock.textContent.trim() + ".json";
+      var title = choiceStock.textContent.trim() + " " + "Stock Chart";
+      drawChart(Path,title);
+    };
+    var Path = "/static/" + choiceStock.textContent.trim() + ".json";
+    var title = choiceStock.textContent.trim() + " " + "Stock Chart";
+    drawChart(Path,title);
+  }
+};
+
+function drawChart(Path,title) {
   var dataPoints1 = [],
     dataPoints2 = [],
     dataPoints3 = [];
@@ -7,7 +60,7 @@ window.onload = function () {
     exportEnabled: true,
     theme: "dark1",
     title: {
-      text: "StockChart with Tooltip & Crosshair Syncing",
+      text: title,
     },
     charts: [
       {
@@ -89,7 +142,7 @@ window.onload = function () {
       },
     },
   });
-  $.getJSON('/static/ltceur2018.json', function (data) {
+  $.getJSON(Path, function (data) {
     for (var i = 0; i < data.length; i++) {
       dataPoints1.push({
         x: new Date(data[i].date),
@@ -113,4 +166,4 @@ window.onload = function () {
     }
     stockChart.render();
   });
-};
+}
