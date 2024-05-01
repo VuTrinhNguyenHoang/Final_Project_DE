@@ -37,7 +37,7 @@ table {
   font-size: 12px;
   height: 40px;
   padding: 0 15px;
-  width: 400px;
+  width: 600px;
   margin-right: 60px;
   color: #fff;
 }
@@ -57,20 +57,19 @@ table {
   }
 }
 
-.btn {
+.btn--primary {
   border: 2px solid #ff9500;
   border-radius: 30px;
   padding: 8px 24px;
   white-space: nowrap;
-  color: #000;
+  color: black;
   background: #ff9500;
   line-height: 26px;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin: 0 8px;
 }
 
 .container {
-  width: 1054px;
+  width: 1280px;
   max-width: 100%;
 }
