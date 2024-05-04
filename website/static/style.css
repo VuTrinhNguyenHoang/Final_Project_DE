@@ -75,15 +75,18 @@ table {
 }
 /* menu Ban */
 .menu{
-  width: 500px;
+  width: 100%;
   height: 30px;
   display: flex;
   cursor: pointer;
 }
 .menuText{
   
-  margin-right: 10px;
-  margin-left: 35px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#stockMenu{
+  justify-content: left;
 }
 .selector{
   /* background: #ff9500; */
