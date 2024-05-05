@@ -26,7 +26,8 @@ import yfinance as yf
 @views.route('/news')
 def news():
     tickers = [
-        'AAPL', 'MSFT', 'GOOGL', 'AMZN',       # Các công ty trên sàn Nasdaq
+        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA',     
+        'DIS', 'JPM', 'WMT', 'KO',             
         'VIC', 'VHM', 'VNM',                   # Các mã chứng khoán trên sàn Ho Chi Minh Stock Exchange (HOSE)
         'GAS', 'BVH', 'TBC',                   # Các mã chứng khoán trên sàn Hanoi Stock Exchange (HNX)
     ]
@@ -55,12 +56,6 @@ def news():
                 items.append(item)
 
     return render_template('news.html', user=current_user, items=items)
-
-from tensorflow.keras.models import load_model
-@views.route('technical-analysis')
-def technical_analysis():
-
-    return render_template('technical_analysis.html', user=current_user)
 
 import os
 import json

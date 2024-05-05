@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user, logout_user, current_user
+from flask_login import login_user, logout_user, current_user, login_required
 from .models import User
 from . import db
 
@@ -54,6 +54,26 @@ def sign_up():
     return render_template('sign_up.html', user=current_user)
 
 @auth.route('/logout')
+@login_required
 def logout():
     logout_user()
     return redirect(url_for('views.home'))
+
+@auth.route('technical-analysis', methods=['GET', 'POST'])
+@login_required
+def technical_analysis():
+    urls = {
+        'Mô hình dự đoán': 'static/AAPL.jpg',
+        'Giá đóng cửa': 'static/AAPL_Close.jpg',
+        'Khối lượng giao dịch': 'static/AAPL_Volume.jpg',
+        'Trung bình di động': 'static/AAPL_MA.jpg'
+    }
+    technical = 'Mô hình dự đoán'
+
+    if request.method == 'POST':
+        technical = request.form.get('technical-list')
+
+    return render_template('technical_analysis.html', 
+                           user=current_user, 
+                           chart_name=technical, 
+                           url=urls[technical])

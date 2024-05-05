@@ -84,6 +84,17 @@ table {
   z-index: 9999;
 }
 
+.image-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 /* menu Ban */
 .menu{
   width: 100%;
