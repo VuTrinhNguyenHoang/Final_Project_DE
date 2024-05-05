@@ -1,6 +1,6 @@
-flask==3.0.3
-Flask-SQLAlchemy==2.0.29
-flask-login==0.6.3
-pandas==2.2.2
-yfinance==0.2.38
-tensorflow==2.16.1
+Flask
+Flask-SQLAlchemy
+flask-login
+pandas
+yfinance
+tensorflow
