@@ -73,17 +73,31 @@ table {
   width: 1280px;
   max-width: 100%;
 }
+
+#listID{
+  cursor: pointer;
+  width: 120px;
+  padding: 0px;
+  border-radius: 6px;
+  overflow: visible;
+  position: absolute;
+  z-index: 9999;
+}
+
 /* menu Ban */
 .menu{
-  width: 500px;
+  width: 100%;
   height: 30px;
   display: flex;
   cursor: pointer;
 }
 .menuText{
   
-  margin-right: 10px;
-  margin-left: 35px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#stockMenu{
+  justify-content: left;
 }
 .selector{
   /* background: #ff9500; */
@@ -135,7 +149,7 @@ table {
   position: absolute;
   z-index: 9999;
 }
-.options{
+.ID, .options{
   cursor: pointer;
   width: 100%;
   list-style: none;
